@@ -1,0 +1,22 @@
+So bekommst du die Terminanfragen per E-Mail (kostenlos)
+========================================================
+
+1. Gehe auf https://formspree.io und klicke auf "Get Started" / "Kostenlos starten".
+
+2. Melde dich an (z. B. mit deiner E-Mail ali.koeruek@gmail.com).
+
+3. Erstelle ein neues Formular:
+   - E-Mail für Benachrichtigungen: ali.koeruek@gmail.com
+   - Formularname z. B. "Terminanfragen Website"
+
+4. Formspree zeigt dir eine URL wie:
+   https://formspree.io/f/xjvqlqjy
+   Deine Form-ID ist der Teil nach /f/ (z. B. xjvqlqjy).
+
+5. In der Datei "termin.html" suche nach:
+   action="https://formspree.io/f/DEINE_FORM_ID"
+
+6. Ersetze DEINE_FORM_ID durch deine echte Form-ID, z. B.:
+   action="https://formspree.io/f/xjvqlqjy"
+
+Fertig. Ab dann landen alle abgesendeten Formulare in deinem Postfach.
