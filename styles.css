@@ -206,6 +206,14 @@ body {
   box-shadow: var(--shadow);
   padding: 1.75rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+a.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 .service-card-header {
   display: flex;
@@ -385,6 +393,146 @@ body {
 .leistung-image--mechanic {
   background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
   background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400');
+}
+
+/* ===== Autokaufberatung ===== */
+.autokaufberatung {
+  background: linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-white) 100%);
+  padding: 3.5rem 1.5rem;
+}
+.autokaufberatung-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.autokaufberatung-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+.autokaufberatung-icon {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  color: var(--color-accent);
+}
+.autokaufberatung-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.autokaufberatung-intro {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.autokaufberatung-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.autokauf-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border: 2px solid transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.autokauf-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+.autokauf-card--premium {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 24px rgba(232, 93, 4, 0.15);
+}
+.autokauf-card--premium:hover {
+  box-shadow: 0 12px 32px rgba(232, 93, 4, 0.2);
+}
+.autokauf-badge {
+  position: absolute;
+  top: -10px;
+  right: 1.25rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+.autokauf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-bg-light);
+}
+.autokauf-card--premium .autokauf-card-header {
+  border-bottom-color: rgba(232, 93, 4, 0.2);
+}
+.autokauf-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.autokauf-preis {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.autokauf-card--premium .autokauf-preis {
+  color: var(--color-accent);
+}
+.autokauf-features {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  flex: 1;
+}
+.autokauf-features li {
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+.autokauf-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.autokauf-card--premium .autokauf-features li::before {
+  color: var(--color-accent);
+}
+.autokauf-btn {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .autokaufberatung-grid {
+    grid-template-columns: 1fr;
+  }
+  .autokauf-card {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 /* ===== Preise ===== */

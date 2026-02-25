@@ -32,9 +32,10 @@
       </a>
       <nav class="nav">
         <a href="#leistungen">Leistungen</a>
+        <a href="#autokaufberatung">Autokaufberatung</a>
         <a href="#preise">Preise</a>
         <a href="#ueber-mich">Über mich</a>
-        <a href="#kontakt">Kontakt!</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
       <a href="tel:015168409220" class="header-phone">
         <span class="phone-icon" aria-hidden="true">
@@ -61,7 +62,7 @@
   <!-- Dienstleistungsübersicht -->
   <section class="services-overview">
     <div class="services-overview-inner">
-      <article class="service-card service-card--kauf">
+      <a href="#autokaufberatung" class="service-card service-card--kauf">
         <div class="service-card-header">
           <span class="service-icon service-icon--search" aria-hidden="true">🔍</span>
           <h2>AUTOKAUFBERATUNG</h2>
@@ -73,7 +74,7 @@
           <li>Lackmessung</li>
           <li>Preisverhandlung</li>
         </ul>
-      </article>
+      </a>
       <article class="service-card service-card--diagnose">
         <div class="service-card-header">
           <span class="service-icon service-icon--wrench" aria-hidden="true">🔧</span>
@@ -147,6 +148,49 @@
           <h3>Komplett-Paket</h3>
           <p>Rundum-Sorglos: Diagnose, Check und Beratung in einem – inkl. ausführlichem Protokoll.</p>
           <div class="leistung-image leistung-image--mechanic"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autokaufberatung Pakete -->
+  <section class="autokaufberatung" id="autokaufberatung">
+    <div class="autokaufberatung-inner">
+      <h2 class="autokaufberatung-title">
+        <span class="autokaufberatung-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </span>
+        Autokaufberatung
+      </h2>
+      <p class="autokaufberatung-intro">Sicher kaufen mit professionellem Check – ich prüfe, Sie entscheiden informiert.</p>
+      <div class="autokaufberatung-grid">
+        <article class="autokauf-card">
+          <div class="autokauf-card-header">
+            <h3>Basis-Check</h3>
+            <span class="autokauf-preis">249 €</span>
+          </div>
+          <ul class="autokauf-features">
+            <li>Fehlerspeicher-Scan</li>
+            <li>Sichtprüfung Karosserie &amp; Technik</li>
+            <li>Probefahrt</li>
+            <li>Kurze Einschätzung</li>
+          </ul>
+          <a href="termin.html?paket=basis" class="btn btn-secondary autokauf-btn">Termin buchen</a>
+        </article>
+        <article class="autokauf-card autokauf-card--premium">
+          <span class="autokauf-badge">Empfohlen</span>
+          <div class="autokauf-card-header">
+            <h3>Premium-Check</h3>
+            <span class="autokauf-preis">349 €</span>
+          </div>
+          <ul class="autokauf-features">
+            <li>Alles aus Basis</li>
+            <li>Lackschichtmessung</li>
+            <li>Marktwertanalyse</li>
+            <li>Detaillierter Zustandsbericht (PDF)</li>
+            <li>Einschätzung Reparaturkosten</li>
+          </ul>
+          <a href="termin.html?paket=premium" class="btn btn-primary autokauf-btn">Termin buchen</a>
         </article>
       </div>
     </div>
