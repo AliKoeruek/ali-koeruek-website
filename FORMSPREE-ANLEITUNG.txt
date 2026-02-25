@@ -3,10 +3,10 @@ So bekommst du die Terminanfragen per E-Mail (kostenlos)
 
 1. Gehe auf https://formspree.io und klicke auf "Get Started" / "Kostenlos starten".
 
-2. Melde dich an (z. B. mit deiner E-Mail ali.koeruek@gmail.com).
+2. Melde dich an (z. B. mit deiner E-Mail kfz-experte-koeruek@gmx.de).
 
 3. Erstelle ein neues Formular:
-   - E-Mail für Benachrichtigungen: ali.koeruek@gmail.com
+   - E-Mail für Benachrichtigungen: kfz-experte-koeruek@gmx.de
    - Formularname z. B. "Terminanfragen Website"
 
 4. Formspree zeigt dir eine URL wie:
