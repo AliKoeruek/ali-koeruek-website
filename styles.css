@@ -197,7 +197,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 .service-card {
@@ -238,19 +238,12 @@ a.service-card:hover {
   font-weight: 500;
 }
 .service-image {
-  height: 120px;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
-  background-size: cover;
-  background-position: center;
-}
-.service-image--car {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600');
-}
-.service-image--diagnose {
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
-  background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600');
+  display: block;
 }
 .service-list {
   list-style: none;
@@ -271,6 +264,7 @@ a.service-card:hover {
 }
 .service-list--orange li::before { color: var(--color-accent); }
 .service-list--blue li::before { color: var(--color-primary); }
+.service-list--green li::before { color: #16a34a; }
 
 /* ===== Advantages ===== */
 .advantages {
@@ -434,7 +428,7 @@ a.service-card:hover {
 }
 .autokaufberatung-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .autokauf-card {
@@ -474,27 +468,51 @@ a.service-card:hover {
 .autokauf-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--color-bg-light);
 }
-.autokauf-card--premium .autokauf-card-header {
-  border-bottom-color: rgba(232, 93, 4, 0.2);
-}
 .autokauf-card h3 {
   margin: 0;
+  flex: 1;
+  min-width: 0;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-text);
+}
+.autokauf-card--premium .autokauf-card-header {
+  border-bottom-color: rgba(232, 93, 4, 0.2);
 }
 .autokauf-preis {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .autokauf-card--premium .autokauf-preis {
   color: var(--color-accent);
+}
+.autokauf-card--fahrzeugsuche {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.12);
+}
+.autokauf-card--fahrzeugsuche:hover {
+  box-shadow: 0 12px 32px rgba(26, 54, 93, 0.18);
+}
+.autokauf-card--fahrzeugsuche .autokauf-card-header {
+  border-bottom-color: rgba(26, 54, 93, 0.15);
+}
+.autokauf-card--fahrzeugsuche .autokauf-preis {
+  color: var(--color-primary);
+}
+.autokauf-card--fahrzeugsuche .autokauf-features li::before {
+  color: var(--color-primary);
+}
+.autokauf-badge--neu {
+  background: var(--color-primary);
 }
 .autokauf-features {
   list-style: none;
@@ -524,11 +542,176 @@ a.service-card:hover {
   text-align: center;
   margin-top: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .autokaufberatung-grid {
     grid-template-columns: 1fr;
   }
   .autokauf-card {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* ===== Vorab-Check ===== */
+.vorab-check {
+  background: var(--color-white);
+  padding: 3.5rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.vorab-check-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.vorab-check-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+.vorab-check-icon {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  color: #16a34a;
+}
+.vorab-check-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.vorab-check-intro {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vorab-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.vorab-card {
+  background: var(--color-bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border: 2px solid transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.vorab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+.vorab-card--premium {
+  border-color: #16a34a;
+  background: var(--color-white);
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.12);
+}
+.vorab-card--premium:hover {
+  box-shadow: 0 12px 32px rgba(22, 163, 74, 0.18);
+}
+.vorab-card--komplett {
+  border-color: var(--color-primary);
+  background: linear-gradient(180deg, var(--color-white) 0%, rgba(26, 54, 93, 0.03) 100%);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.12);
+}
+.vorab-card--komplett:hover {
+  box-shadow: 0 12px 32px rgba(26, 54, 93, 0.18);
+}
+.vorab-badge {
+  position: absolute;
+  top: -10px;
+  right: 1.25rem;
+  background: #16a34a;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+.vorab-badge--komplett {
+  background: var(--color-primary);
+}
+.vorab-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+.vorab-card h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.vorab-card--premium .vorab-card-header,
+.vorab-card--komplett .vorab-card-header {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+.vorab-preis {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.vorab-card--premium .vorab-preis {
+  color: #16a34a;
+}
+.vorab-card--komplett .vorab-preis {
+  color: var(--color-primary);
+}
+.vorab-features {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  flex: 1;
+}
+.vorab-features li {
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+.vorab-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #16a34a;
+}
+.vorab-card--komplett .vorab-features li::before {
+  color: var(--color-primary);
+}
+.vorab-btn {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+}
+@media (max-width: 900px) {
+  .vorab-check-grid {
+    grid-template-columns: 1fr;
+  }
+  .vorab-card {
     max-width: 400px;
     margin: 0 auto;
     width: 100%;
@@ -782,6 +965,70 @@ a.service-card:hover {
 }
 .footer-phone:hover {
   text-decoration: underline;
+}
+.footer-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.footer-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* ===== Impressum ===== */
+.impressum-page {
+  padding: 3rem 1.5rem;
+  min-height: 60vh;
+}
+.impressum-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.impressum-page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+.impressum-hinweis {
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.impressum-block {
+  margin-bottom: 2rem;
+}
+.impressum-block h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.impressum-block h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.impressum-block h3:first-of-type {
+  margin-top: 1rem;
+}
+.impressum-block p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+.impressum-block a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.impressum-block a:hover {
+  text-decoration: underline;
+}
+.impressum-back {
+  margin: 2.5rem 0 0;
 }
 
 /* ===== Termin-Seite & Formular ===== */

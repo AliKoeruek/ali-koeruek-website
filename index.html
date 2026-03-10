@@ -33,6 +33,7 @@
       <nav class="nav">
         <a href="#leistungen">Leistungen</a>
         <a href="#autokaufberatung">Autokaufberatung</a>
+        <a href="#vorab-check">Vorab-Check</a>
         <a href="#preise">Preise</a>
         <a href="#ueber-mich">Über mich</a>
         <a href="#kontakt">Kontakt</a>
@@ -68,11 +69,24 @@
           <h2>AUTOKAUFBERATUNG</h2>
         </div>
         <p class="service-slogan">Ich prüfe, Sie kaufen sicher!</p>
-        <div class="service-image service-image--car"></div>
+        <img class="service-image" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Mercedes-Benz Sportwagen" width="600" height="400">
         <ul class="service-list service-list--orange">
           <li>Fahrzeug-Check</li>
           <li>Lackmessung</li>
           <li>Preisverhandlung</li>
+        </ul>
+      </a>
+      <a href="#vorab-check" class="service-card service-card--vorab">
+        <div class="service-card-header">
+          <span class="service-icon" aria-hidden="true">📍</span>
+          <h2>VORAB-CHECK</h2>
+        </div>
+        <p class="service-slogan">Ich fahre vorab hin – Sie sparen die Anfahrt!</p>
+        <img class="service-image" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Mechaniker prüft Fahrzeug" width="600" height="400">
+        <ul class="service-list service-list--green">
+          <li>Prüfung vor Ihrem Besuch</li>
+          <li>Fotos & Einschätzung</li>
+          <li>Ideal bei weiter Anreise</li>
         </ul>
       </a>
       <article class="service-card service-card--diagnose">
@@ -81,7 +95,7 @@
           <h2>MOBILE DIAGNOSE</h2>
         </div>
         <p class="service-slogan">Fehlerspeicher & Service</p>
-        <div class="service-image service-image--diagnose"></div>
+        <img class="service-image" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=80" alt="Diagnosegerät am Fahrzeug" width="600" height="400">
         <ul class="service-list service-list--blue">
           <li>Fehlerspeicher Auslesen</li>
           <li>Batterie Anlernen</li>
@@ -94,8 +108,8 @@
   <!-- Vorteile -->
   <section class="advantages">
     <div class="advantages-inner">
-      <h2>Ihr Vorteil: Ich komme zu Ihnen!</h2>
-      <p class="advantages-sub">Kein Werkstattstress – Ich helfe direkt bei Ihnen.</p>
+      <h2>Ihr Vorteil: Wir kommen zu Ihnen!</h2>
+      <p class="advantages-sub">Kein Werkstattstress – Wir helfen direkt bei Ihnen.</p>
       <div class="advantages-grid">
         <div class="advantage-item">
           <span class="advantage-icon" aria-hidden="true">⏱</span>
@@ -191,6 +205,75 @@
             <li>Einschätzung Reparaturkosten</li>
           </ul>
           <a href="termin.html?paket=premium" class="btn btn-primary autokauf-btn">Termin buchen</a>
+        </article>
+        <article class="autokauf-card autokauf-card--fahrzeugsuche">
+          <span class="autokauf-badge autokauf-badge--neu">Neu</span>
+          <div class="autokauf-card-header">
+            <h3>Komplett-Paket Fahrzeugsuche</h3>
+            <span class="autokauf-preis">449 €</span>
+          </div>
+          <ul class="autokauf-features">
+            <li>Für Sie, die noch nicht wissen welches Fahrzeug</li>
+            <li>Wir suchen passende Fahrzeuge heraus</li>
+            <li>Gefällt Ihnen eines – wir fahren hin und prüfen es</li>
+            <li>Rundum-Sorglos bis zum Kauf</li>
+          </ul>
+          <a href="termin.html?paket=fahrzeugsuche" class="btn btn-primary autokauf-btn">Termin buchen</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorab-Check -->
+  <section class="vorab-check" id="vorab-check">
+    <div class="vorab-check-inner">
+      <h2 class="vorab-check-title">
+        <span class="vorab-check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        Vorab-Check
+      </h2>
+      <p class="vorab-check-intro">Sie schicken mir das Fahrzeug – ich fahre vorab dorthin und prüfe es. So müssen Sie nicht zweimal fahren oder lange Anreisen in Kauf nehmen.</p>
+      <div class="vorab-check-grid">
+        <article class="vorab-card">
+          <div class="vorab-card-header">
+            <h3>Basis Vorab-Check</h3>
+            <span class="vorab-preis">249 €</span>
+          </div>
+          <ul class="vorab-features">
+            <li>Sichtprüfung</li>
+            <li>Fotos</li>
+            <li>Einschätzung Zustand</li>
+            <li>Telefonische Beratung</li>
+          </ul>
+          <a href="termin.html?paket=vorab-basis" class="btn btn-secondary vorab-btn">Termin buchen</a>
+        </article>
+        <article class="vorab-card vorab-card--premium">
+          <span class="vorab-badge">Beliebt</span>
+          <div class="vorab-card-header">
+            <h3>Premium Vorab-Check</h3>
+            <span class="vorab-preis">349 €</span>
+          </div>
+          <ul class="vorab-features">
+            <li>Alles aus Basis</li>
+            <li>OBD Diagnose</li>
+            <li>Lackmessung</li>
+            <li>Probefahrt</li>
+            <li>Preisbewertung</li>
+          </ul>
+          <a href="termin.html?paket=vorab-premium" class="btn btn-primary vorab-btn">Termin buchen</a>
+        </article>
+        <article class="vorab-card vorab-card--komplett">
+          <span class="vorab-badge vorab-badge--komplett">Komplett</span>
+          <div class="vorab-card-header">
+            <h3>Komplett Vorab-Check</h3>
+            <span class="vorab-preis">399 €</span>
+          </div>
+          <ul class="vorab-features">
+            <li>Alles aus Premium</li>
+            <li>Preisverhandlung</li>
+          </ul>
+          <a href="termin.html?paket=vorab-komplett" class="btn btn-primary vorab-btn">Termin buchen</a>
         </article>
       </div>
     </div>
@@ -291,6 +374,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <a href="termin.html" class="footer-cta-link">Jetzt Termin vereinbaren!</a>
+      <a href="impressum.html" class="footer-link">Impressum</a>
       <a href="tel:015168409220" class="footer-phone">
         <span class="phone-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
