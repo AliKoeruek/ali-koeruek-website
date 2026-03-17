@@ -1140,6 +1140,18 @@ a.service-card:hover {
   .nav {
     order: 3;
     width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scrollbar-width: none; /* Firefox */
+  }
+  .nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  .nav a {
+    white-space: nowrap;
   }
   .header-phone {
     order: 2;
