@@ -8,6 +8,7 @@
     'vorab-komplett': 'Vorab-Check Komplett (399 €)',
     'basis': 'Autokaufberatung',
     'premium': 'Autokaufberatung',
+    'raussuchen': 'Fahrzeugsuche – Raussuchen (99 €)',
     'fahrzeugsuche': 'Komplett-Paket Fahrzeugsuche (449 €)'
   };
   const leistung = document.getElementById('leistung');

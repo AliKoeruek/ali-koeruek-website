@@ -428,7 +428,7 @@ a.service-card:hover {
 }
 .autokaufberatung-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 .autokauf-card {
@@ -486,13 +486,25 @@ a.service-card:hover {
   border-bottom-color: rgba(232, 93, 4, 0.2);
 }
 .autokauf-preis {
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  line-height: 1.1;
+}
+.autokauf-preis-zahl {
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-primary);
-  white-space: nowrap;
-  flex-shrink: 0;
 }
-.autokauf-card--premium .autokauf-preis {
+.autokauf-preis-euro {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.15rem;
+}
+.autokauf-card--premium .autokauf-preis-zahl,
+.autokauf-card--premium .autokauf-preis-euro {
   color: var(--color-accent);
 }
 .autokauf-card--fahrzeugsuche {
@@ -505,7 +517,8 @@ a.service-card:hover {
 .autokauf-card--fahrzeugsuche .autokauf-card-header {
   border-bottom-color: rgba(26, 54, 93, 0.15);
 }
-.autokauf-card--fahrzeugsuche .autokauf-preis {
+.autokauf-card--fahrzeugsuche .autokauf-preis-zahl,
+.autokauf-card--fahrzeugsuche .autokauf-preis-euro {
   color: var(--color-primary);
 }
 .autokauf-card--fahrzeugsuche .autokauf-features li::before {
