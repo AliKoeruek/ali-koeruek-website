@@ -141,6 +141,19 @@ body {
   max-width: 520px;
   margin-left: auto;
 }
+.hero-intro {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+.hero-intro-line {
+  display: block;
+}
+.hero-intro-line + .hero-intro-line {
+  margin-top: 0.35rem;
+}
 .hero h1 {
   margin: 0 0 0.5rem;
   font-size: clamp(1.75rem, 4vw, 2.25rem);
