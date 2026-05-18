@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termin vereinbaren – Ali Körük | KFZ-Experte</title>
+  <title>Termin vereinbaren – Ali Körük | KFZ Technik Körük</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,31 +15,28 @@
     <div class="header-inner">
       <a href="index.html" class="logo">
         <span class="logo-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M8 28 L10 22 L14 20 L18 18 L30 18 L34 20 L38 22 L40 28 L40 32 L8 32 Z" stroke="currentColor" stroke-width="2" fill="none"/>
-            <circle cx="14" cy="32" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
-            <circle cx="34" cy="32" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
-            <path d="M26 14 L28 10 L32 12 L30 16 Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
-            <rect x="27" y="8" width="2" height="6" rx="1" fill="currentColor"/>
-          </svg>
+          <img src="images/logo-gradient.png" alt="KFZ Technik Körük" width="72" height="56">
         </span>
         <span class="logo-text">
           <strong>Ali Körük</strong>
-          <small>UNABHÄNGIGER KFZ-EXPERTE</small>
+          <small>KFZ TECHNIK KÖRÜK</small>
         </span>
       </a>
-      <nav class="nav">
-        <a href="index.html#leistungen">Leistungen</a>
-        <a href="index.html#preise">Preise</a>
-        <a href="index.html#ueber-mich">Über mich</a>
-        <a href="index.html#kontakt">Kontakt</a>
-      </nav>
-      <a href="tel:01639031136" class="header-phone">
-        <span class="phone-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        </span>
-        <span>Jetzt anrufen: <strong>0163 9031136</strong></span>
-      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="index.html#leistungen">Leistungen</a>
+          <a href="index.html#werkstatt">Werkstatt</a>
+          <a href="index.html#preise">Preise</a>
+          <a href="index.html#ueber-mich">Über mich</a>
+          <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+        <a href="tel:01639031136" class="header-phone">
+          <span class="phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <span>Jetzt anrufen: <strong>0163 9031136</strong></span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -48,7 +45,7 @@
       <h1>Termin vereinbaren</h1>
       <p class="termin-intro">Füllen Sie das Formular aus – ich melde mich schnellstmöglich bei Ihnen.</p>
 
-      <!-- Formspree: Kostenlos auf formspree.io anmelden, Form erstellen, E-Mail kfz-experte-koeruek@gmx.de eintragen.
+      <!-- Formspree: Kostenlos auf formspree.io anmelden, Form erstellen, E-Mail kfz-technik-koeruek@gmx.de eintragen.
            Dann die Form-ID aus der Formspree-URL unten bei action einsetzen: .../f/xzdaoznp -->
       <form class="termin-form" id="termin-form" action="https://formspree.io/f/xzdaoznp" method="POST">
         <input type="hidden" name="_subject" value="Neue Terminanfrage von der Website">
@@ -65,6 +62,16 @@
         <label for="leistung">Gewünschte Leistung</label>
         <select id="leistung" name="leistung">
           <option value="">Bitte wählen</option>
+          <optgroup label="Werkstatt">
+            <option value="Werkstatt – Kleiner Service (ab 90 €)">Werkstatt – Kleiner Service (ab 90 €)</option>
+            <option value="Werkstatt – Großer Service (ab 180 €)">Werkstatt – Großer Service (ab 180 €)</option>
+            <option value="Werkstatt – Ölwechsel-Service (ab 40 €)">Werkstatt – Ölwechsel-Service (ab 40 €)</option>
+            <option value="Werkstatt – Bremsflüssigkeitswechsel (ab 50 €)">Werkstatt – Bremsflüssigkeitswechsel (ab 50 €)</option>
+            <option value="Werkstatt – Fehlerspeicher auslesen (ab 30 €)">Werkstatt – Fehlerspeicher auslesen (ab 30 €)</option>
+            <option value="Werkstatt – Urlaubs-/Winter-Check (50 €)">Werkstatt – Urlaubs-/Winter-Check (50 €)</option>
+            <option value="Werkstatt – Sonstige Arbeit (75 €/h)">Werkstatt – Sonstige Arbeit (75 €/h)</option>
+          </optgroup>
+          <optgroup label="Mobiler Service">
           <option value="Fehlerspeicher auslesen und Löschen">Fehlerspeicher auslesen und Löschen</option>
           <option value="Serviceintervall zurücksetzen">Serviceintervall zurücksetzen</option>
           <option value="Bremsen-Service-Reset">Bremsen-Service-Reset</option>
@@ -76,6 +83,7 @@
           <option value="Vorab-Check Basis (249 €)">Vorab-Check Basis (249 €)</option>
           <option value="Vorab-Check Premium (349 €)">Vorab-Check Premium (349 €)</option>
           <option value="Vorab-Check Komplett (399 €)">Vorab-Check Komplett (399 €)</option>
+          </optgroup>
           <option value="Sonstiges">Sonstiges</option>
         </select>
 
