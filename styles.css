@@ -1047,11 +1047,17 @@ a.service-card:hover {
   box-shadow: var(--shadow);
 }
 .kontakt-name {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-primary);
   letter-spacing: 0.02em;
+}
+.kontakt-adresse {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
 }
 .kontakt-zeile {
   margin: 0 0 0.75rem;
