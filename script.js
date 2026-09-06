@@ -3,13 +3,13 @@
   const params = new URLSearchParams(window.location.search);
   const paket = params.get('paket');
   const mapping = {
-    'vorab-basis': 'Vorab-Check Basis (249 €)',
-    'vorab-premium': 'Vorab-Check Premium (349 €)',
-    'vorab-komplett': 'Vorab-Check Komplett (399 €)',
+    'vorab-basis': 'Vorab-Check Basis (179 €)',
+    'vorab-premium': 'Vorab-Check Premium (229 €)',
+    'vorab-komplett': 'Vorab-Check Komplett (299 €)',
     'basis': 'Autokaufberatung',
     'premium': 'Autokaufberatung',
-    'raussuchen': 'Fahrzeugsuche – Raussuchen (99 €)',
-    'fahrzeugsuche': 'Komplett-Paket Fahrzeugsuche (449 €)'
+    'raussuchen': 'Fahrzeugsuche – Raussuchen (59 €)',
+    'fahrzeugsuche': 'Komplett-Paket Fahrzeugsuche (299 €)'
   };
   const leistung = document.getElementById('leistung');
   if (leistung && paket && mapping[paket]) {
